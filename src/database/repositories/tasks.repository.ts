@@ -9,4 +9,12 @@ export class TasksRepository {
 
         return createdTask.toObject<Task>()
     }
+
+    async index(): Promise<Task[]> {
+        const tasks = await this.model.find()
+
+        const tasksMap = tasks.map(item => item.toObject<Task>())
+
+        return tasksMap
+    }
 }

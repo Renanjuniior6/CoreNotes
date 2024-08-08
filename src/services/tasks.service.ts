@@ -16,4 +16,10 @@ export class TasksService {
 
     return createdTask
  }
+
+ async index (): Promise<Task[]> {
+    const tasks = await this.tasksRepository.index()
+
+    return tasks
+ }
 }
