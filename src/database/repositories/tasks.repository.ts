@@ -4,8 +4,8 @@ import { TaskModel } from "../schemas/task.schema";
 export class TasksRepository {
     constructor( private model: typeof TaskModel ) {}
 
-    async create({title, color}: Task): Promise<Task> {
-        const createdTask = await this.model.create({title, color})
+    async create({title, color, favorite, text}: Task): Promise<Task> {
+        const createdTask = await this.model.create({title, color, favorite, text})
 
         return createdTask.toObject<Task>()
     }

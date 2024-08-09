@@ -5,11 +5,13 @@ import { Task } from "../entities/tasks.entity";
 export class TasksService {
     constructor(private tasksRepository: TasksRepository){}
 
- async create ({title, color}: CreateTaskDTO): Promise<Task> {
+ async create ({title, color, text, favorite}: CreateTaskDTO): Promise<Task> {
     
     const task = new Task({
         title,
-        color
+        color,
+        text,
+        favorite,
     })
 
     const createdTask = await this.tasksRepository.create(task)

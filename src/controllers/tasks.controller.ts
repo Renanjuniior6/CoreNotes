@@ -9,9 +9,9 @@ export class TasksController {
     create = async (req: Request<unknown, unknown, CreateTaskDTO>, res: Response, next: NextFunction) => {
 
         try {
-            const {title, color} = req.body
+            const {title, color, favorite, text} = req.body
     
-            const result = await this.tasksService.create({title, color})
+            const result = await this.tasksService.create({title, color, favorite, text})
     
             return res.status(StatusCodes.CREATED).json(result)
 
