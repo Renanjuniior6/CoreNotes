@@ -1,11 +1,13 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose"
 
-export const TaskSchema = new mongoose.Schema({
+export const TaskSchema = new mongoose.Schema(
+  {
     title: String,
     color: String,
     favorite: Boolean,
-    text: String
+    text: String,
+  },
+  { versionKey: false },
+)
 
-}, {versionKey: false})
-
-export const TaskModel = mongoose.model('Task', TaskSchema)
+export const TaskModel = mongoose.model("Task", TaskSchema)

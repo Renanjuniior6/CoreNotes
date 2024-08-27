@@ -1,11 +1,11 @@
-import { StatusCodes } from 'http-status-codes'
+import { StatusCodes } from "http-status-codes"
 
 export class AppError {
-    public statusCodes: StatusCodes
-    public message: string | string[]
+  public statusCodes: StatusCodes
+  public message: string | string[]
 
-    constructor(message: string | string[], statusCode: StatusCodes){
-        this.message = message
-        this.statusCodes = statusCode
-    }
+  constructor(message: string | string[], statusCode: StatusCodes) {
+    this.message = message
+    this.statusCodes = statusCode
+  }
 }

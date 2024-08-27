@@ -1,47 +1,47 @@
 type TaskProps = {
-    _id?: string
-    title: string
-    color: string
-    text: string
-    favorite: boolean
+  _id?: string
+  title: string
+  color: string
+  text: string
+  favorite: boolean
 }
 
 export class Task {
-public _id?: string
-public title: string
-public color: string
-public text: string
-public favorite: boolean
+  public _id?: string
+  public title: string
+  public color: string
+  public text: string
+  public favorite: boolean
 
-constructor({_id, title, color, favorite, text}: TaskProps) {
+  constructor({ _id, title, color, favorite, text }: TaskProps) {
     this._id = _id
     this.title = title
     this.color = color?.toUpperCase()
     this.text = text
     this.favorite = favorite
-}
+  }
 }
 
 type UpdateTaskProps = {
-    _id: string
-    title?: string
-    color?: string
-    text?: string
-    favorite?: boolean
+  _id: string
+  title?: string
+  color?: string
+  text?: string
+  favorite?: boolean
 }
 
 export class UpdateTask {
-public _id: string
-public title?: string
-public color?: string
-public text?: string
-public favorite?: boolean
+  public _id: string
+  public title?: string
+  public color?: string
+  public text?: string
+  public favorite?: boolean
 
-constructor({_id, title, color, favorite, text}: UpdateTaskProps) {
+  constructor({ _id, title, color, favorite, text }: UpdateTaskProps) {
     this._id = _id
     this.title = title
     this.color = color?.toUpperCase()
     this.text = text
     this.favorite = favorite
-}
+  }
 }
