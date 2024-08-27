@@ -1,6 +1,6 @@
 import { TasksRepository } from "../database/repositories/tasks.repository";
 import { CreateTaskDTO, DeleteTaskDTO, UpdateTaskDTO } from "../dtos/tasks.dto";
-import { Task } from "../entities/tasks.entity";
+import { Task, UpdateTask } from "../entities/tasks.entity";
 
 export class TasksService {
     constructor(private tasksRepository: TasksRepository){}
@@ -28,7 +28,7 @@ export class TasksService {
  
  async update ({_id, title, color, text, favorite}: UpdateTaskDTO): Promise<void> {
     
-   const task = new Task({
+   const task = new UpdateTask({
        _id,
        title,
        color,

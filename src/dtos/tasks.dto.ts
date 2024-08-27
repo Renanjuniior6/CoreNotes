@@ -8,7 +8,7 @@ export const createTaskSchema = {
 }
 
 export const updateTaskSchema = {
-    _id: z.string().optional(),
+    _id: z.string(),
     title: z.string().optional(),
     color: z.string().regex(/^#[A-Fa-f0-9]{6}$/).optional(),
     text: z.string().optional(),
@@ -25,9 +25,11 @@ const createTaskObject = z.object(createTaskSchema)
 
 export type CreateTaskDTO = z.infer<typeof createTaskObject>
 
+
 const updateTaskObject = z.object(updateTaskSchema)
 
 export type UpdateTaskDTO = z.infer<typeof updateTaskObject>
+
 
 const deleteTaskObject = z.object(deleteTaskSchema)
 

@@ -1,6 +1,6 @@
 import { Task } from "../../entities/tasks.entity";
 import { TaskModel } from "../schemas/task.schema";
-import { DeleteTaskDTO } from "../../dtos/tasks.dto";
+import { DeleteTaskDTO, UpdateTaskDTO } from "../../dtos/tasks.dto";
 
 export class TasksRepository {
     constructor( private model: typeof TaskModel ) {}
@@ -19,7 +19,7 @@ export class TasksRepository {
         return tasksMap
     }
 
-    async update({title, color, favorite, text, _id}: Task): Promise<void> {
+    async update({title, color, favorite, text, _id}: UpdateTaskDTO): Promise<void> {
 
         await this.model.updateOne({_id: _id}, {title, color, favorite, text})
 
