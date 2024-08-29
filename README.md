@@ -18,7 +18,7 @@ API da aplicação CoreNotes que consiste em tratar e devolver os dados para o f
   - ➡ Os dados vão ser armazenados no banco de dados e enviar uma resposta ao usuário e o front end
     
 - Controles de erros foram criados para dar um feedback melhor ao fazer requisições que podem gerar erros  
-  - ➡ Um alerta será mostrado e com um "status code" correspondente apontando o erro que foi gerado
+  - ➡ Um alerta será mostrado e com um **status code** correspondente apontando o erro que foi gerado
     
 
 ## ❓ Como rodar o projeto
@@ -48,16 +48,17 @@ $ npm run dev
 
 ## ❗ Observações 
 - Este projeto para rodar corretamente na sua máquina será necessário ter o Docker com imagem do MongoDB
+- Caso a imagem do **Mongo** não estiver rodando a aplicação não irá funcionar
 - O projeto está usando as configurações do **Eslint + Prettier** para padronização do código
 
 ## 📁 Pastas do projeto
--  `./src/server.ts` está localizada o arquivo responsável por fazer a aplicação rodar
--  `./src/database/index.ts` onde é feita a conexão com o banco de dados através do **mongoose**
+-  `./src/server.ts` está localizada o arquivo de setup da aplicação e responsável por fazer rodar 
+-  `./src/database/index.ts` onde é feita a conexão com o banco de dados através do **Mongoose**
 -  `./src/database/schemas` está o schema que será utilizado nas "colections" do MongoDB
 -  `./src/routes` estão todas rotas da aplicação
 -  `./src/controllers` estão os controllers de cada rota
 -  `./src/services` estão os services chamados pela controller de cada rota
--  `./src/database/repositories` estão os repositories que faz interação direta com o Mongo de acordo com a requisição chamada
+-  `./src/database/repositories` estão os repositories que fazem a interação direta com o Mongo de acordo com a requisição chamada
 -  `./src/dtos` estão as tipagens dos schemas da aplicação
 -  `./src/entities` estão as principais entidades utilizadas no projeto
 
