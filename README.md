@@ -12,19 +12,24 @@ API da aplicação CoreNotes que consiste em tratar e devolver os dados para o f
 
 ## 🔧 Funcionalidades
 - Irá receber os dados das anotações do front end e tratar eles 
-  - ➡ Assim que os dados forem enviados pelo usuário a API irá responder devolvendo os dados tratados
+     - ➡ Assim que os dados forem enviados pelo usuário a API irá responder devolvendo os dados tratados
     
 - A API possui rotas para fazer a leitura, atualização, deletar e criar uma nota de acordo com as requisições da aplicação e do usuário 
-  - ➡ Os dados vão ser armazenados no banco de dados e enviar uma resposta ao usuário e o front end
+    - ➡ Os dados vão ser armazenados no banco de dados e enviar uma resposta ao usuário e o front end
     
 - Controles de erros foram criados para dar um feedback melhor ao fazer requisições que podem gerar erros  
-  - ➡ Um alerta será mostrado e com um **status code** correspondente apontando o erro que foi gerado
+    - ➡ Um alerta será mostrado e com um **status code** correspondente apontando o erro que foi gerado
     
 
 ## ❓ Como rodar o projeto
+
+### Setup ambiente
+- [Node LTS](https://nodejs.org/pt)
+- [NPM ^9.x](https://docs.npmjs.com/cli/v10/commands/npm)
+
 ```bash
 # Clone este respositório
-$ git clone [URL]
+$ git clone https://github.com/Renanjuniior6/CoreNotes_API
 
 # Instale as dependências
 $ npm install
