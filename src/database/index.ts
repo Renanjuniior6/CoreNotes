@@ -6,7 +6,9 @@ export async function SetupMongo(): Promise<void> {
       return
     }
     console.log("🎲 connecting to DB...")
-    await mongoose.connect(process.env.MONGO_URL as string)
+    await mongoose.connect(process.env.MONGO_URL as string, {
+      serverSelectionTimeoutMS: 3000,
+    })
     console.log("✅ DB connected!")
   } catch {
     throw new Error("❌ DB not connected!")
